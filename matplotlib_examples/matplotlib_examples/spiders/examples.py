@@ -7,7 +7,7 @@ from ..items import ExampleItem
 class ExamplesSpider(scrapy.Spider):
     name = 'examples'
     #allowed_domains = ['matplotlib.org']
-    start_urls = ['https://matplotlib.org/examples/index.html']
+    start_urls = ['http://matplotlib.org/examples/index.html']
 
     def parse(self, response):
         le = LinkExtractor(restrict_css='div.toctree-wrapper.compound', deny='/index.html$')
